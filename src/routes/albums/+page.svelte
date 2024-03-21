@@ -35,6 +35,7 @@
 </script>
 
 <div class="container">
+    
     <div>
         <h1>E-Commerce</h1>
         <h2>Albums</h2>
@@ -184,8 +185,22 @@
         </article>
     </div>
 </div>
+<div class="orders-link">
+    <a href="/orders">Orders</a>
+</div>
 
 <style lang="less">
+    .orders-link{
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        background-color: black;
+        text-align: center;
+        padding: 0.5rem 1.25rem;
+        border-radius: 0.5rem;
+        width: max-content;
+        font-size: 1rem;
+    }
     .album {
         position: relative;
     }
