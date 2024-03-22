@@ -129,10 +129,6 @@
             <h2>Alternative/Indie</h2>
             <div>
                 <h3>Catalogue</h3>
-                <p>
-                    In my spare time I work with clay, creating organic
-                    sculptural pieces.
-                </p>
                 <div class="gallery">
                     <div class="inner">
                         {#each albums_map["alternative_indie"] as album}

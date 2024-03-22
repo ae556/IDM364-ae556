@@ -18,33 +18,70 @@ location.href = `/orders/${orderid}`
 
 
 </script>
-<div>
+<div class="container">
     <h1>Checkout</h1>
    
         {#if browser} 
         <div>
-        {#each cart_items as item}
-        <div>
-            <h3>{item.title}</h3>
-            <h4>{item.price}</h4>
+       
+        <table>
+            <thead>Details
+                <tr>
+                    <th>
+                    Title
+                        
+                    </th>
+                    <th>
+                      Name      
+                    </th>
+        
+                </tr>
+            </thead>
+            <tbody>
+            {#each cart_items as item}
+                <tr>
+                    <td>
+                        {item.title}
+                    </td>
+                    <td>
+                        {item.price} 
+                    </td>
+                </tr>
+            {/each}
+            </tbody>
+
+        </table>
+       
         </div>
-        {/each} 
-        </div>
-        <div>
+        <div class="container">
             <header>
                 <h2>
                     Total Price: {cart_items.reduce((a,item)=> a+item.price, 0)}
                 </h2>
             </header>
             <div>
-                <button on:click={() => location.href = "/albums"}>
+                <button class="default-button" on:click={() => location.href = "/albums"}>
                     Back to Shop
                 </button>
-                <button on:click={handleCheckoutCart}>
+                <button class="default-button" on:click={handleCheckoutCart}>
                     Checkout
                 </button>
             </div>
         </div>
         {/if}
 </div>
+<style>
+    .default-button{
+        background-color: white;
+        padding: 0.5rem 1.25rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Helvetica, sans-serif;
+    }
+</style>
 
