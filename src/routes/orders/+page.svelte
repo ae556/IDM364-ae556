@@ -7,6 +7,11 @@
 <div class="container">
   <header>
     <h1>Order Details</h1>
+    <div>
+        <button class="default-button secondary-button">
+          <a href="/albums">Back to Home</a>
+        </button>
+      </div>
   </header>
   {#if browser}
     {#each orders_parse as order}
@@ -31,6 +36,11 @@
 </div>
 
 <style>
+    header{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
   .container {
     margin: 0 auto;
     padding: 1.25rem;
@@ -58,5 +68,29 @@
   footer {
     margin-top: 1.25rem;
     text-align: right;
+  }
+  .default-button {
+    background-color: #0fc439;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  .default-button:hover {
+    background-color: #0a8a2a;
+  }
+  .secondary-button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  .secondary-button:hover {
+    background-color: antiquewhite;
   }
 </style>
