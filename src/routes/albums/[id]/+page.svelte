@@ -51,11 +51,18 @@ const handle_add_album_to_cart = () =>{
         align-items: center;
     }
     
-    .default-button{
-        background-color: white;
-        padding: 0.5rem 1.25rem;
-        border-radius: 0.5rem;
-        font-size: 1rem;
+    .default-button {
+        background-color: #0fc439; 
+        color: white;
+        padding: 0.5rem 1rem; 
+        border: none;
+        border-radius: 0.3125rem; 
+        cursor: pointer;
+        font-size: 1rem; 
+    }
+
+    .default-button:hover {
+        background-color: #0a8a2a; 
     }
     img{
         border-radius: 0.5rem;
