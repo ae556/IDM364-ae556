@@ -23,22 +23,18 @@
   {#if browser}
     <div>
       <table>
-        <thead
-          >Details
+        <thead>
+        
           <tr>
-            <th> Title </th>
-            <th> Name </th>
+            <th>Title</th>
+            <th>Name</th>
           </tr>
         </thead>
         <tbody>
           {#each cart_items as item}
             <tr>
-              <td>
-                {item.title}
-              </td>
-              <td>
-                {item.price}
-              </td>
+              <td>{item.title}</td>
+              <td>{item.price}</td>
             </tr>
           {/each}
         </tbody>
@@ -46,20 +42,11 @@
     </div>
     <div class="container">
       <header>
-        <h2>
-          Total Price: {cart_items.reduce((a, item) => a + item.price, 0)}
-        </h2>
+        <h2>Total Price: {cart_items.reduce((a, item) => a + item.price, 0)}</h2>
       </header>
       <div>
-        <button
-          class="default-button"
-          on:click={() => (location.href = '/albums')}
-        >
-          Back to Shop
-        </button>
-        <button class="default-button" on:click={handleCheckoutCart}>
-          Checkout
-        </button>
+        <button class="default-button" on:click={() => (location.href = '/albums')}>Back to Shop</button>
+        <button class="default-button" on:click={handleCheckoutCart}>Checkout</button>
       </div>
     </div>
   {/if}
@@ -77,5 +64,15 @@
     flex-direction: column;
     align-items: center;
     font-family: Helvetica, sans-serif;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  th, td {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    text-align: left;
   }
 </style>
